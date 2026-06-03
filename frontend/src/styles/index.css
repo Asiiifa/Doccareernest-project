@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #171717;
+  background: #fffdf7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(#fffdf7 0 0),
+    repeating-linear-gradient(to bottom, transparent 0, transparent 31px, #e9eefc 32px);
+  color: #171717;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.notebook-paper {
+  background:
+    linear-gradient(90deg, rgba(255, 253, 247, 0.92), rgba(255, 253, 247, 0.92)),
+    repeating-linear-gradient(to bottom, transparent 0, transparent 31px, #e9eefc 32px);
+}
+
+.doodle-border {
+  border: 1.5px solid #d9dee9;
+  box-shadow: 2px 3px 0 rgba(23,23,23,0.06);
+}
+
+.hand-title {
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  letter-spacing: 0;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cad3e5 transparent;
+}
+
+.mind-connector {
+  position: absolute;
+  height: 2px;
+  background: #2f67e8;
+  transform-origin: left center;
+  border-radius: 999px;
+}
