@@ -1,0 +1,24 @@
+# Python virtual environment
+backend/venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Local databases and runtime data
+
+# Local SQLite database
+backend/data/*.db

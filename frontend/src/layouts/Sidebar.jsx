@@ -25,34 +25,20 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="hidden w-56 shrink-0 border-r border-borderSoft bg-paper/90 p-4 lg:block">
+    <aside className="hidden w-64 shrink-0 border-r border-borderSoft bg-paper/90 p-4 lg:block">
       <Logo />
       <nav className="mt-6 space-y-1">
         {navItems.map(({ to, label, icon: Icon }) => (
-          <NavLink
-            key={to}
-            to={to}
-            className={({ isActive }) =>
-              `flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition ${
-                isActive ? "border border-blue-200 bg-blueSoft text-blueInk" : "text-ink hover:bg-white"
-              }`
-            }
-          >
-            <Icon className="h-4 w-4" />
-            {label}
+          <NavLink key={to} to={to} className={({ isActive }) => `tap-feedback flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition ${isActive ? "border border-blue-200 bg-blueSoft text-blueInk" : "text-ink hover:bg-white"}`}>
+            <Icon className="h-4 w-4 shrink-0" />
+            <span className="whitespace-nowrap">{label}</span>
           </NavLink>
         ))}
       </nav>
       <div className="doodle-border mt-8 rounded-lg bg-white/70 p-4">
-        <div className="mb-2 flex items-center gap-2 text-xs font-semibold">
-          <Sparkles className="h-4 w-4 text-blueInk" />
-          Storage Used
-        </div>
-        <p className="text-xs text-mutedInk">7.4 GB of 15 GB</p>
-        <div className="mt-3 h-2 overflow-hidden rounded-full bg-blue-100">
-          <div className="h-full w-[49%] rounded-full bg-blueInk" />
-        </div>
-        <button className="mt-3 text-xs font-semibold text-blueInk">Upgrade Storage &rarr;</button>
+        <div className="mb-2 flex items-center gap-2 text-xs font-semibold"><Sparkles className="h-4 w-4 text-blueInk" />Workspace Status</div>
+        <p className="text-xs text-mutedInk">Storage and account usage will appear after services are connected.</p>
+        <button className="tap-feedback mt-3 text-xs font-semibold text-blueInk">Connect Services &rarr;</button>
       </div>
     </aside>
   );

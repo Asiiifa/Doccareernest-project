@@ -1,0 +1,43 @@
+"""Pydantic schema exports."""
+
+from app.schemas.files import (
+    ApprovedScanRoot,
+    ApprovedScanRootListResponse,
+    ApproveScanRootRequest,
+    DuplicateFileInfo,
+    DuplicateGroup,
+    DuplicatesRequest,
+    DuplicatesResponse,
+    ErrorResponse,
+    FileRecord,
+    FileSearchRequest,
+    FileSearchResponse,
+    HealthResponse,
+    LatestFileResponse,
+    RemovedApprovedScanRootResponse,
+    ScanDirectoryRequest,
+    ScanDirectoryResponse,
+    ScanError,
+    StorageStatsResponse,
+)
+
+__all__ = [
+    "ApprovedScanRoot",
+    "ApprovedScanRootListResponse",
+    "ApproveScanRootRequest",
+    "DuplicateFileInfo",
+    "DuplicateGroup",
+    "DuplicatesRequest",
+    "DuplicatesResponse",
+    "ErrorResponse",
+    "FileRecord",
+    "FileSearchRequest",
+    "FileSearchResponse",
+    "HealthResponse",
+    "LatestFileResponse",
+    "RemovedApprovedScanRootResponse",
+    "ScanDirectoryRequest",
+    "ScanDirectoryResponse",
+    "ScanError",
+    "StorageStatsResponse",
+]
